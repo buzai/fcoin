@@ -10,7 +10,7 @@
 ./src/bitcoind -rpcuser=user -rpcpassword=123456 -daemon  -rpcport=28333 -datadir=./data
 ./src/bitcoin-cli -rpcuser=user -rpcpassword=123456 -daemon  -rpcport=28333  -rpcconnect=127.0.0.1
 
-./src/bitcoind -checkpoints=0 -rpcuser=user -rpcpassword=123456  -rpcport=28333 -datadir=./data
+./src/bitcoind -checkpoints=0 -rpcuser=user -rpcpassword=123456  -rpcport=28333 -datadir=./data -addnode=192.168.1.11:9999
 ./src/bitcoin-cli -rpcuser=user -rpcpassword=123456  -rpcport=28333  -rpcconnect=127.0.0.1
 
 
