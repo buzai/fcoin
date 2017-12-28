@@ -6,12 +6,34 @@
 ./reits-cli -datadir=.reits -rpcuser=user -rpcpassword=123456 -rpcconnect=127.0.0.1 -rpcport=28333 importwallet defaultkey.w
 
 
+./src/bitcoind -rpcuser=user -rpcpassword=123456   -rpcport=28333 -datadir=./data
 
 ./src/bitcoind -rpcuser=user -rpcpassword=123456 -daemon  -rpcport=28333 -datadir=./data
-./src/bitcoin-cli -rpcuser=user -rpcpassword=123456 -daemon  -rpcport=28333  -rpcconnect=127.0.0.1
+./src/bitcoin-cli -rpcuser=user -rpcpassword=123456 -rpcport=28333  -rpcconnect=127.0.0.1
 
 ./src/bitcoind -checkpoints=0 -rpcuser=user -rpcpassword=123456  -rpcport=28333 -datadir=./data -addnode=192.168.1.11:9999
+
+./src/bitcoind -checkpoints=0 -rpcuser=user -rpcpassword=123456  -rpcport=28333 -datadir=./data -addnode=139.224.148.109:8333
+
+
+
 ./src/bitcoin-cli -rpcuser=user -rpcpassword=123456  -rpcport=28333  -rpcconnect=127.0.0.1
+
+
+./src/bitcoin-cli -rpcuser=user -rpcpassword=123456 -rpcport=28333  -rpcconnect=127.0.0.1 
+
+getblockcount
+
+getpeerinfo
+
+getblockhash
+
+getmininginfo
+
+getnetworkinfo
+
+
+getbalance
 
 
 == Blockchain ==

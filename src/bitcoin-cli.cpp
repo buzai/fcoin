@@ -10,7 +10,11 @@
 #include "util.h"
 #include "utilstrencodings.h"
 
-#include <boost/filesystem/operations.hpp>
+// #include <boost/filesystem/operations.hpp>
+#define BOOST_NO_CXX11_SCOPED_ENUMS
+// #include <boost/filesystem.hpp>
+// #include <boost/filesystem/operations.hpp>
+#undef BOOST_NO_CXX11_SCOPED_ENUMS
 
 #define _(x) std::string(x) /* Keep the _() around in case gettext or such will be used later to translate non-UI */
 
@@ -78,10 +82,10 @@ static bool AppInitRPC(int argc, char* argv[])
         fprintf(stdout, "%s", strUsage.c_str());
         return false;
     }
-    if (!boost::filesystem::is_directory(GetDataDir(false))) {
-        fprintf(stderr, "Error: Specified data directory \"%s\" does not exist.\n", mapArgs["-datadir"].c_str());
-        return false;
-    }
+    // if (!boost::filesystem::is_directory(GetDataDir(false))) {
+    //     fprintf(stderr, "Error: Specified data directory \"%s\" does not exist.\n", mapArgs["-datadir"].c_str());
+    //     return false;
+    // }
     try {
         ReadConfigFile(mapArgs, mapMultiArgs);
     } catch (const std::exception& e) {
