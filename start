@@ -45,6 +45,22 @@ logging (<include> <exclude> )
 stop
 uptime
 
+objdump -T /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21 | grep "_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareERKS4_"
+
+sudo apt-get autoremove build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
+
+
+/sbin/ldconfig.real: /usr/lib/x86_64-linux-gnu/libapt-private.so.0.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/lib/x86_64-linux-gnu/libstdc++.so.6 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/lib/x86_64-linux-gnu/libapt-pkg.so.5.0 is not a symbolic link
+
+
+sudo ln -sf /usr/local/lib/libprotobuf.so.8.0.0  /usr/local/lib/libprotobuf.so.8
+
+
 == Generating ==
 generate nblocks (maxtries)
 generatetoaddress nblocks address (maxtries)
