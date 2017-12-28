@@ -35,7 +35,11 @@
 
 #include <stdint.h>
 
+// #include <boost/filesystem/operations.hpp>
+#define BOOST_NO_CXX11_SCOPED_ENUMS
+// #include <boost/filesystem.hpp>
 #include <boost/filesystem/operations.hpp>
+#undef BOOST_NO_CXX11_SCOPED_ENUMS
 #include <boost/thread.hpp>
 
 #include <QApplication>

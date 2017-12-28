@@ -115,3 +115,4 @@ qa/pull-tester/test.*/*
 libbitcoinconsensus.pc
 
 data
+olddata
