@@ -38,7 +38,7 @@
 // #include <boost/filesystem/operations.hpp>
 #define BOOST_NO_CXX11_SCOPED_ENUMS
 // #include <boost/filesystem.hpp>
-#include <boost/filesystem/operations.hpp>
+// #include <boost/filesystem/operations.hpp>
 #undef BOOST_NO_CXX11_SCOPED_ENUMS
 #include <boost/thread.hpp>
 
@@ -554,12 +554,12 @@ int main(int argc, char *argv[])
 
     /// 6. Determine availability of data directory and parse bitcoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
-    if (!boost::filesystem::is_directory(GetDataDir(false)))
-    {
-        QMessageBox::critical(0, QObject::tr("Bitcoin Core"),
-                              QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
-        return 1;
-    }
+    // if (!boost::filesystem::is_directory(GetDataDir(false)))
+    // {
+    //     QMessageBox::critical(0, QObject::tr("Bitcoin Core"),
+    //                           QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
+    //     return 1;
+    // }
     try {
         ReadConfigFile(mapArgs, mapMultiArgs);
     } catch (const std::exception& e) {
